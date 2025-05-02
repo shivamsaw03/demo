@@ -32,3 +32,9 @@ class BookDetailView(DetailView):
 
     def get_queryset(self):
         return Book.objects.filter(is_visible=True)
+    
+class myprofile(TemplateView):
+     template_name='books/myprofile.html'
+        
+     def get_queryset(self):
+         return myprofile.objects.filter(is_visible=True)
