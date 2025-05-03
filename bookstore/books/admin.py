@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book, Contact,profile
+from .models import Book, Contact,Profile
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
@@ -16,7 +16,7 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'message')
     date_hierarchy = 'submitted_at'
     ordering = ('-submitted_at',)
-    @admin.register(profile)
+    @admin.register(Profile)
     class ContactAdmin(admin.ModelAdmin):
         list_display = ('name', 'email', 'about','mobile')
     search_fields = ('name', 'email', 'message')
